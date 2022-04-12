@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Button("Toggle Favorites", action: vm.filterFavs)
+            Button("Toggle Favorites", action: vm.sortFavs)
                 .padding()
             
             List {
@@ -32,7 +32,6 @@ struct ContentView: View {
                                 vm.toggleFav(item: item)
                             }
                     }
-                    
                 }
             }
             .cornerRadius(10)

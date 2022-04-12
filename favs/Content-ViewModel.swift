@@ -29,7 +29,7 @@ extension ContentView {
             self.items = Item.sampleItems
         }
         
-        func filterFavs() {
+        func sortFavs() {
             withAnimation() {
                 showingFavs.toggle()
             }
