@@ -17,16 +17,7 @@ extension ContentView {
         // Filter saved items
         var filteredItems: [Item]  {
             if showingFavs {
-                var newList = [Item]()
-                
-                for item in items {
-                    for saved in savedItems {
-                        if saved == item.id {
-                            newList.append(item)
-                        }
-                    }
-                }
-                return newList
+                return items.filter { savedItems.contains($0.id) }
             }
             return items
         }
